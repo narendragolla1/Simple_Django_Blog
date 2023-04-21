@@ -1,0 +1,11 @@
+{% extends 'main/base.html'%}
+
+{% block content %}
+    <h1>{{article.title}}</h1>
+    <h3>Created At {{article.createAt}}</h3>
+    {% for author in article.authors.all %}
+    {{author }},
+    {% endfor %}
+    {% comment %} <h4>Written by : {{article.author}}</h4> {% endcomment %}
+    <p>{{article.content}}</p>
+{% endblock %}
